@@ -1,11 +1,12 @@
-import ProductDetailContent from "../../components/ProductDetailContent";
+import ProductDetailContent from "@/app/components/ProductDetailContent";
 
-export const revalidate = 10;
+// app/product-isr/[id]/page.tsx
+export const revalidate = 10; // ISR every 10s
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 type Product = {
@@ -24,7 +25,7 @@ async function getProduct(id: string): Promise<Product> {
 }
 
 export default async function ProductDetailISR({ params }: Props) {
-  const { id } = await params;
+  const { id } = await params; 
   const product = await getProduct(id);
 
   return <ProductDetailContent product={product} />;

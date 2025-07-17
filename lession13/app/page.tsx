@@ -100,14 +100,7 @@ export default async function HomePage() {
           </div>
         )}
 
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
-            <RefreshCcwDot size={18} className="text-orange-500" />
-            <span className="text-gray-700 font-medium">
-              Trang chủ được cập nhật mỗi 10 giây bằng ISR
-            </span>
-          </div>
-        </div>
+        
       </div>
     </div>
   );

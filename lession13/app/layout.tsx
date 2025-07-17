@@ -1,5 +1,4 @@
 import "./globals.css";
-import Link from "next/link";
 import {
   Monitor,
   Search,
@@ -11,7 +10,6 @@ import {
   Headphones,
   Watch,
   Tablet,
-  Tv,
   CreditCard,
   DollarSign,
 } from "lucide-react";

@@ -1,12 +1,12 @@
 "use client";
-import { useCartStore } from "../lib/cart-store";
+import { useCartStore, CartItem } from "../lib/cart-store";
 import { Trash2, Plus, Minus, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 
 export default function CartPage() {
   const { items, removeFromCart, addToCart, clearCart } = useCartStore();
 
-  const updateQuantity = (item: any, newQuantity: number) => {
+  const updateQuantity = (item: CartItem, newQuantity: number) => {
     if (newQuantity <= 0) {
       removeFromCart(item.id);
     } else {
